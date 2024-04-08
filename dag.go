@@ -28,6 +28,7 @@ type Object struct {
 	Data  []byte
 }
 
+<<<<<<< HEAD
 func Add(store KVStore, node Node, h hash.Hash) []byte {
 	return processNode(node, store, h)
 }
@@ -187,4 +188,20 @@ func putObjInStore(obj *Object, store KVStore, h hash.Hash) {
 		return
 	}
 	store.Put(hash, value)
+=======
+type Link struct {
+	Name string
+	Hash []byte
+	Size int
+}
+
+type Object struct {
+	Links []Link
+	Data  []byte
+}
+
+func Add(store KVStore, node Node, hp HashPool) []byte {
+	// TODO 将分片写入到KVStore中，并返回Merkle Root
+	return nil
+>>>>>>> c1a60202beb4fd3abcbf7a2bc99c8ff22ea55320
 }

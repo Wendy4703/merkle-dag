@@ -1,3 +1,3 @@
-module merkle-dag
+module merkledag
 
 go 1.22.0
